@@ -13,3 +13,7 @@ ln -s ${BASEDIR}/Xdefaults ~/.Xdefaults
 
 #xinitrc
 ln -s ${BASEDIR}/xinitrc ~/.xinitrc
+
+echo ''
+echo 'Installed!'
+
