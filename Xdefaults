@@ -1,0 +1,101 @@
+!-------------------------------------------------------------------------------
+! Xft settings
+!-------------------------------------------------------------------------------
+
+Xft.dpi:                    96
+Xft.antialias:              false
+Xft.rgba:                   rgb
+Xft.hinting:                true
+Xft.hintstyle:              hintslight
+Xcursor.theme:              Breeze-Default
+
+!-------------------------------------------------------------------------------
+! URxvt settings
+! Solarized (http://ethanschoonover.com/solarized)
+! More info at:
+! http://pod.tst.eu/http://cvs.schmorp.de/rxvt-unicode/doc/rxvt.1.pod
+!-------------------------------------------------------------------------------
+
+URxvt.depth:                32
+URxvt.geometry:             90x30
+URxvt.transparent:          true
+URxvt.shading:		10
+URxvt.fading:               10
+! URxvt.urgentOnBell:         true
+! URxvt.visualBell:           true
+URxvt.loginShell:           true
+URxvt.saveLines:            100000
+URxvt.internalBorder:       3
+URxvt.lineSpace:            0
+URxvt.termName:		rxvt
+URxvt.inputMethod:  ibus
+!URxvt.preeditType:  OverTheSpot
+
+! Fonts
+URxvt.allow_bold:           true
+/* URxvt.font:                 -*-sansserif-medium-r-normal-*-12-120-72-72-c-60-iso8859-1 */
+URxvt*font: xft:Monospace:pixelsize=10
+URxvt*boldFont: xft:Monospace:pixelsize=10
+
+! Fix font space
+URxvt*letterSpace: -1
+
+! Scrollbar
+URxvt.scrollStyle:          rxvt
+URxvt.scrollBar:            false
+
+! Perl extensions
+URxvt.perl-ext-common:      default,matcher
+URxvt.matcher.button:       1
+URxvt.urlLauncher:          firefox
+
+! Cursor
+URxvt.cursorBlink:          true
+URxvt.cursorColor:          #657b83
+URxvt.cursorUnderline:      false
+
+! Pointer
+URxvt.pointerBlank:         true
+
+!!Source http://github.com/altercation/solarized
+
+URxvt*xftAntialias: true
+
+ ! special
+ URxvt.foreground:   #c5c8c6
+ URxvt.background:   #1d1f21
+ URxvt.cursorColor:  #c5c8c6
+
+ ! black
+ URxvt.color0:       #282a2e
+ URxvt.color8:       #373b41
+
+ ! red
+ URxvt.color1:       #a54242
+ URxvt.color9:       #cc6666
+
+ ! green
+ URxvt.color2:       #8c9440
+ URxvt.color10:      #b5bd68
+
+ ! yellow
+ URxvt.color3:       #de935f
+ URxvt.color11:      #f0c674
+
+ ! blue
+ URxvt.color4:       #5f819d
+ URxvt.color12:      #81a2be
+
+ ! magenta
+ URxvt.color5:       #85678f
+ URxvt.color13:      #b294bb
+
+ ! cyan
+ URxvt.color6:       #5e8d87
+ URxvt.color14:      #8abeb7
+
+ ! white
+ URxvt.color7:       #707880
+ URxvt.color15:      #c5c8c6
+
+
