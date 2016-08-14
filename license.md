@@ -1,4 +1,4 @@
-# GNU General Public License, version 2
+# GNU General Public License, version 3
 
 Copyright (c) 2016 Bibek Shah
 
