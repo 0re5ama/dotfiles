@@ -10,3 +10,6 @@ autoload -U compinit
 compinit
 alias ls="ls --color=always"
 export QT_QPA_PLATFORMTHEME="qt5ct"
+export WECHALLUSER="shahbibek10"
+export WECHALLTOKEN="41E22-01000-D10C1-7C1EC-20A26-6317E"
+
