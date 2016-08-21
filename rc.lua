@@ -70,6 +70,7 @@ local layouts =
 }
 -- }}}
 
+
 -- {{{ Wallpaper
 if beautiful.wallpaper then
     for s = 1, screen.count() do
@@ -83,8 +84,8 @@ end
 tags = {}
 for s = 1, screen.count() do
     -- Each screen has its own tag table.
--- 一二三四五六七八九
-    tags[s] = awful.tag({ "一", "二", "三", "四", "五", "六", "七", "八", "九" }, s, layouts[2])
+    -- 一二三四五六七八九
+    tags[s] = awful.tag({ "一", "二", "三", "四", "五", "六", "七", "八", "九" }, s, {layouts[2], layouts[2], layouts[2], layouts[2], layouts[10], layouts[2], layouts[2], layouts[2], layouts[2]} )
 end
 -- }}}
 
@@ -366,9 +367,14 @@ awful.rules.rules = {
       properties = { floating = true } },
     { rule = { class = "gimp" },
       properties = { floating = true } },
-    -- Set Firefox to always map on tags number 2 of screen 1.
-    -- { rule = { class = "Firefox" },
-    --   properties = { tag = tags[1][2] } },
+    { rule = { class = "Galculator" },
+      properties = { floating = true } },
+    -- Set Firefox to always map on tags number 9 of screen 1.
+    { rule = { class = "Firefox" },
+      properties = { tag = tags[1][9] } },
+    { rule = { class = "Zathura" },
+      properties = { tag = tags[1][5] } },
+
 }
 -- }}}
 
