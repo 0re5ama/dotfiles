@@ -14,6 +14,13 @@ ln -s ${BASEDIR}/Xdefaults ~/.Xdefaults
 #xinitrc
 ln -s ${BASEDIR}/xinitrc ~/.xinitrc
 
+#rc.lua
+ln -s ${BASEDIR}/rc.lua ~/.config/awesome/rc.lua
+
+#zathurarc
+ln -s ${BASEDIR}/zathurarc ~/.config/zathura/zathurarc
+
+
 echo ''
 echo 'Installed!'
 
