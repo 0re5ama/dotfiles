@@ -260,3 +260,9 @@ function GetTeXIndent()
 endfunction
 
 " vim: set sw=4 textwidth=78:
+set sw=4
+set iskeyword+=:
+"set autoindent&
+"set cindent&
+"set smartindent&
+"set indentexpr&
