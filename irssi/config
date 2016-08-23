@@ -368,6 +368,7 @@ statusbar = {
         topicbarend = { priority = "100"; alignment = "right"; };
       };
     };
+    dccstat = { items = { dccstat = { }; }; };
   };
 };
 settings = {

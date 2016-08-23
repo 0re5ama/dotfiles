@@ -1,7 +1,11 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_cnt =9
 let g:netrw_dirhist_1='/usr/share/awesome/themes/zenburn'
 let g:netrw_dirhist_2='/home/xer0/.vim/bundle/vundle/syntax'
 let g:netrw_dirhist_3='/usr/share/applications'
 let g:netrw_dirhist_4='/etc/X11/xorg.conf.d'
 let g:netrw_dirhist_5='/home/xer0/.vim'
+let g:netrw_dirhist_6='/home/xer0/.icons/default'
+let g:netrw_dirhist_7='/usr/share/icons/Breeze-Default'
+let g:netrw_dirhist_8='/media/xer0/sda4/アニメ/Running/Downloads'
+let g:netrw_dirhist_9='/etc/xdg/awesome'
