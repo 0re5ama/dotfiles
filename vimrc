@@ -6,6 +6,10 @@ set autoindent
 set cindent
 set number
 set wildmenu
+set shellslash
+set grepprg=grep\ -nH\ $*
+let g:tex_flavor='latex'
+
 let g:neocomplete#enable_at_startup = 1
 
 "search settings
