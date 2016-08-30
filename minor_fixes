@@ -1,0 +1,15 @@
+#Dolphin icon not showing in wms
+qt5ct for dolphin colors
+
+QT_QPA_PLATFORMTHEME="QT5CT" dolphin
+
+add the following line to .profile
+[ "$XDG_CURRENT_DESKTOP" = "KDE" ] || [ "$XDG_CURRENT_DESKTOP" = "GNOME" ] || export QT_QPA_    PLATFORMTHEME="qt5ct
+
+#Cursor in some Applications like firefox changes to Adwaita
+
+change in ~/.config/gtk-3.0/settings.ini
+    gtk-cursor-theme-name=....
+
+#mime-type fix
+    ~/.config/mimeapps.list edit
