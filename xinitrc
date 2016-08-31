@@ -1,7 +1,7 @@
 compton --backend glx --paint-on-overlay --vsync opengl-swc &
 [[ -f ~/.Xresources ]] && xrdb -merge -I$HOME ~/.Xresources &
 systemctl start Networkmanager &
-pulseaudio -k &
+#pulseaudio -k &
 synclient touchpadoff=1 &
 export GTK_IM_MODULE=ibus &
 export XMODIFIERS=@im=ibus &
