@@ -5,7 +5,9 @@ SAVEHIST=10000
 bindkey -e
 # End of lines configured by zsh-newuser-install
 autoload -U colors && colors
-PROMPT="%{$fg[red]%}%n%{$reset_color%}@%{$fg[blue]%}%m %{$fg_no_bold[yellow]%}%1~ %{$reset_color%}%#"
+PROMPT="%{$fg[red]%}┌──[%{$fg[green]%}%n%{$reset_color%}@%{$fg[blue]%}%m%{$reset_color%}%{$fg[red]%}]─[%{$fg_no_bold[yellow]%}%~%{$reset_color%}%{$fg[red]%}]
+└─[%{$fg[white]%}%#%{$fg[red]%}] %{$reset_color%}"
+RPROMPT='%t'
 autoload -U compinit
 compinit
 alias ls="ls --color=always"

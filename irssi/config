@@ -390,4 +390,8 @@ settings = {
     dcc_download_path = "/Data/Downloads/";
   };
   "irc/core" = { alternate_nick = "xer0"; };
+  "fe-common/core" = {
+    bell_beeps = "yes";
+    beep_msg_level = "MSG NOTICES DCC DCCMSGS HILIGHT";
+  };
 };
