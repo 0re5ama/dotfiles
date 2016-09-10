@@ -1,0 +1,4 @@
+load perl
+run nickcolor.pl
+run dccstat.pl
+run trackbar22.pl

@@ -2,14 +2,10 @@ servers = (
   { address = "irc.dal.net"; chatnet = "DALnet"; port = "6667"; },
   { address = "irc.efnet.org"; chatnet = "EFNet"; port = "6667"; },
   { address = "irc.esper.net"; chatnet = "EsperNet"; port = "6667"; },
-  {
+  { 
     address = "chat.freenode.net";
     chatnet = "Freenode";
     port = "6667";
-    password = "123456ar";
-    use_ssl = "no";
-    ssl_verify = "no";
-    autoconnect = "yes";
   },
   {
     address = "irc.gamesurge.net";
@@ -30,15 +26,7 @@ servers = (
     chatnet = "QuakeNet";
     port = "6667";
   },
-  {
-    address = "irc.rizon.net";
-    chatnet = "Rizon";
-    port = "6667";
-    password = "123456ar";
-    use_ssl = "no";
-    ssl_verify = "no";
-    autoconnect = "yes";
-  },
+  { address = "irc.rizon.net"; chatnet = "Rizon"; port = "6667"; },
   { address = "silc.silcnet.org"; chatnet = "SILC"; port = "706"; },
   { 
     address = "irc.undernet.org";
@@ -103,9 +91,8 @@ chatnets = {
     max_msgs = "1";
     max_whois = "1";
   };
-  Rizon = {
+  Rizon = { 
     type = "IRC";
-    autosendcmd = "^msg nickserv identify 123456ar;";
     max_kicks = "1";
     max_msgs = "1";
     max_whois = "1";
@@ -128,10 +115,7 @@ channels = (
   { name = "#ircsource"; chatnet = "IRCSource"; autojoin = "No"; },
   { name = "#netfuze"; chatnet = "NetFuze"; autojoin = "No"; },
   { name = "#oftc"; chatnet = "OFTC"; autojoin = "No"; },
-  { name = "silc"; chatnet = "SILC"; autojoin = "No"; },
-  { name = "#archlinux"; chatnet = "Freenode"; autojoin = "yes"; },
-  { name = "#horriblesubs"; chatnet = "Rizon"; autojoin = "yes"; },
-  { name = "#commie-subs"; chatnet = "Rizon"; autojoin = "yes"; }
+  { name = "silc"; chatnet = "SILC"; autojoin = "No"; }
 );
 
 aliases = {
@@ -384,20 +368,13 @@ statusbar = {
         topicbarend = { priority = "100"; alignment = "right"; };
       };
     };
-    dccstat = { items = { dccstat = { }; }; };
   };
 };
 settings = {
-  core = { real_name = "Unknown"; user_name = "xer0"; nick = "xvtz"; };
+  core = { real_name = "Unknown"; user_name = "xer0"; nick = "xer0"; };
   "fe-text" = { actlist_sort = "refnum"; };
   "irc/dcc" = {
     dcc_autoget = "yes";
     dcc_download_path = "/Data/Downloads/";
-  };
-  "irc/core" = { alternate_nick = "xer0"; };
-  "fe-common/core" = {
-    bell_beeps = "yes";
-    beep_msg_level = "MSG NOTICES DCC DCCMSGS HILIGHT";
-    theme = "default.theme";
   };
 };
