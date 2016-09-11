@@ -18,8 +18,8 @@ Xcursor.theme:              Breeze-Default
 
 URxvt.depth:                32
 URxvt.geometry:             90x30
-URxvt.transparent:          true
-URxvt.shading:		        40
+!URxvt.transparent:          true
+!URxvt.shading:		        40
 URxvt.fading:               10
 ! URxvt.urgentOnBell:         true
 ! URxvt.visualBell:           true
@@ -67,7 +67,7 @@ URxvt*xftAntialias: true
 
 ! special
 *.foreground:   #ffffff
-*.background:   #000000
+*.background:   rgba:0000/0000/0200/c800
 *.cursorColor:  #ffffff
 
 ! black
