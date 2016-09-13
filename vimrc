@@ -5,6 +5,7 @@ set expandtab
 set autoindent
 set cindent
 set number
+set relativenumber
 set wildmenu
 set shellslash
 set grepprg=grep\ -nH\ $*

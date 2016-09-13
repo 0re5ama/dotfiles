@@ -34,11 +34,11 @@ URxvt.inputMethod:  ibus
 ! Fonts
 URxvt.allow_bold:           true
 /* URxvt.font:                 -*-sansserif-medium-r-normal-*-12-120-72-72-c-60-iso8859-1 */
-URxvt*font: xft:Monospace:pixelsize=10
-URxvt*boldFont: xft:Monospace:pixelsize=10
+URxvt*font: xft:inconsolata:pixelsize=12
+URxvt*boldFont: xft:inconsolata:style=bold:pixelsize=12
 
 ! Fix font space
-URxvt*letterSpace: -1
+URxvt.letterSpace: 0
 
 ! Scrollbar
 URxvt.scrollStyle:          rxvt
