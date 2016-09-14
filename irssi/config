@@ -397,7 +397,13 @@ settings = {
   "irc/core" = { alternate_nick = "xer0"; };
   "fe-common/core" = {
     bell_beeps = "yes";
-    beep_msg_level = "MSG NOTICES DCC DCCMSGS HILIGHT";
+    beep_msg_level = "MSGS NOTICES DCC DCCMSGS HILIGHT";
     theme = "default.theme";
+    beep_when_window_active = "yes";
+    beep_when_away = "yes";
   };
 };
+hilights = (
+  { text = "yournick"; nick = "yes"; word = "yes"; mask = "yes"; },
+  { text = "xvtz"; nick = "yes"; word = "yes"; mask = "yes"; }
+);
