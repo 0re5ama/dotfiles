@@ -1,5 +1,6 @@
 # Lines configured by zsh-newuser-install
 #export TERM="rxvt-unicode-256color"
+ZSH=$HOME/.oh-my-zsh
 HISTFILE=~/.histfile
 HISTSIZE=10000
 SAVEHIST=10000
