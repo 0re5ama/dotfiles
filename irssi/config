@@ -402,8 +402,11 @@ settings = {
     beep_when_window_active = "yes";
     beep_when_away = "yes";
   };
+  "perl/core/scripts" = { neat_right_mode = "no"; neat_maxlength = "9"; };
 };
 hilights = (
   { text = "yournick"; nick = "yes"; word = "yes"; mask = "yes"; },
-  { text = "xvtz"; nick = "yes"; word = "yes"; mask = "yes"; }
+  { text = "xvtz"; nick = "yes"; word = "yes"; mask = "yes"; },
+  { text = "asdf"; nick = "yes"; word = "yes"; }
 );
+logs = { };

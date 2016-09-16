@@ -367,6 +367,8 @@ awful.rules.rules = {
       properties = { floating = true } },
     { rule = { class = "gimp" },
       properties = { floating = true } },
+    { rule = { class = "mpv" },
+      properties = { floating = true } },
     { rule = { class = "Galculator" },
       properties = { floating = true } },
     -- Set Firefox to always map on tags number 9 of screen 1.

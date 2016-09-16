@@ -1,7 +1,9 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
-let g:netrw_dirhist_1='/home/xer0/.ncmpcpp'
-let g:netrw_dirhist_2='/home/xer0/.icons/Loli-Papelk'
-let g:netrw_dirhist_3='/etc/X11/xorg.conf.d'
-let g:netrw_dirhist_4='/tmp'
-let g:netrw_dirhist_5='/home/xer0/.ncmpcpp'
+let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_1='/home/xer0/.config/ranger'
+let g:netrw_dirhist_2='/home/xer0/Documents/copypasta'
+let g:netrw_dirhist_3='/home/xer0/asdf'
+let g:netrw_dirhist_4='/home/xer0/Documents/copypasta'
+let g:netrw_dirhist_5='/home/xer0/.oh-my-zsh/custom/themes/powerlevel9k'
+let g:netrw_dirhist_6='/home/xer0/.oh-my-zsh/custom/themes/powerlevel9k/.git'
+let g:netrw_dirhist_7='/home/xer0/.oh-my-zsh/custom/themes/powerlevel9k'

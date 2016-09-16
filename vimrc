@@ -9,6 +9,14 @@ set relativenumber
 set wildmenu
 set shellslash
 set grepprg=grep\ -nH\ $*
+
+set ls=2
+set statusline=%f\ -\ FileType:\ %y
+set statusline+=%l
+set statusline+=/
+set statusline+=%L
+
+
 let g:tex_flavor='latex'
 
 let g:neocomplete#enable_at_startup = 1
@@ -22,6 +30,10 @@ set incsearch
 let mapleader = ","
 syntax enable
 "set listchars=tab:▸\ ,eol:¬,extends:❯,precedes:❮
+
+if has("gui_running")
+    colorscheme torte
+endif
 
 
 "folds za fold open/close toggle

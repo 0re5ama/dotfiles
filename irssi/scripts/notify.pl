@@ -11,10 +11,10 @@ use vars qw($VERSION %IRSSI);
 
 $VERSION = "0.01";
 %IRSSI = (
-    authors     => 'Luke Macken, Paul W. Frields',
+    authors     => 'Luke Macken, Paul W. Frields, Bibek Kumar Shah',
     contact     => 'lewk@csh.rit.edu, stickster@gmail.com',
     name        => 'notify.pl',
-    description => 'Use libnotify to alert user to hilighted messages',
+    description => 'Use libnotify to alert user to hilighted messages added audio with paplay',
     license     => 'GNU General Public License',
     url         => 'http://lewk.org/log/code/irssi-notify',
 );

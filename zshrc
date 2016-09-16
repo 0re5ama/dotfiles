@@ -1,4 +1,5 @@
 # Lines configured by zsh-newuser-install
+#export TERM="rxvt-unicode-256color"
 HISTFILE=~/.histfile
 HISTSIZE=10000
 SAVEHIST=10000
@@ -18,4 +19,5 @@ export PATH=/usr/local/texlive/2016/bin/x86_64-linux:/home/xer0/Downloads/arduin
 export MANPATH=/usr/local/texlive/2016/texmf-dist/doc/man:$MANPATH
 export INFOPATH=/usr/local/texlive/2016/texmf-dist/doc/info:$INFOPATH
 alias stdn="shutdown -P now"
-
+#ZSH_THEME="powerlevel9k/powerlevel9k"
+source ~/.oh-my-zsh/custom/themes/powerlevel9k/powerlevel9k.zsh-theme
