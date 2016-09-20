@@ -37,7 +37,10 @@ URxvt.inputMethod:  ibus
 URxvt.allow_bold:           true
 /* URxvt.font:                 -*-sansserif-medium-r-normal-*-12-120-72-72-c-60-iso8859-1 */
 URxvt*font: xft:Source\ Code\ Pro\ Medium:pixelsize=11:antialias=true:hinting=true,xft:Source\ Code\ Pro\ Medium:pixelsize=11:antialias=true:hinting=true
-URxvt*boldFont: xft:Source\ Code\ Pro:style=bold:pixelsize=11
+URxvt*boldFont: xft:Source\ Code\ Pro:style=bold:pixelsize=11:hinting=true:antialias=true
+URxvt*italicFont: xft:Soure\ Code\ Pro:style=italic:pixelsize=11:hinting=true:antialias=true
+!URxvt*font: xft:Hack:pixelsize=10:antialias=true:hinting=true
+!URXvt*boldFont: xft:Hack:style=bold:pixelsize=10:antialias=ture:hinting=true
 
 ! Fix font space
 URxvt.letterSpace: 0
@@ -68,39 +71,78 @@ URxvt*xftAntialias: true
 
 
 ! special
-*.foreground:   #ffffff
+*.foreground:   #c5c8c6
 *.background:   rgba:0000/0000/0200/c800
-*.cursorColor:  #ffffff
+*.cursorColor:  #c5c8c6
 
 ! black
-*.color0:       #000000
-*.color8:       #555753
+*.color0:       #282a2e
+*.color8:       #373b41
 
 ! red
-*.color1:       #cc0000
-*.color9:       #ef2929
+*.color1:       #a54242
+*.color9:       #cc6666
 
 ! green
-*.color2:       #4e9a06
-*.color10:      #8ae234
+*.color2:       #8c9440
+*.color10:      #b5bd68
 
 ! yellow
-*.color3:       #c4a000
-*.color11:      #fce94f
+*.color3:       #de935f
+*.color11:      #f0c674
 
 ! blue
-*.color4:       #3465a4
-*.color12:      #729fcf
+*.color4:       #5f819d
+*.color12:      #81a2be
 
 ! magenta
-*.color5:       #75507b
-*.color13:      #ad7fa8
+*.color5:       #85678f
+*.color13:      #b294bb
 
 ! cyan
-*.color6:       #06989a
-*.color14:      #34e2e2
+*.color6:       #5e8d87
+*.color14:      #8abeb7
 
 ! white
-*.color7:       #d3d7cf
-*.color15:      #eeeeec
+*.color7:       #707880
+*.color15:      #c5c8c6
 
+
+
+!! special
+!*.foreground:   #ffffff
+!*.background:   rgba:0000/0000/0200/c800
+!*.cursorColor:  #ffffff
+!
+!! black
+!*.color0:       #000000
+!*.color8:       #555753
+!
+!! red
+!*.color1:       #cc0000
+!*.color9:       #ef2929
+!
+!! green
+!*.color2:       #4e9a06
+!*.color10:      #8ae234
+!
+!! yellow
+!*.color3:       #c4a000
+!*.color11:      #fce94f
+!
+!! blue
+!*.color4:       #3465a4
+!*.color12:      #729fcf
+!
+!! magenta
+!*.color5:       #75507b
+!*.color13:      #ad7fa8
+!
+!! cyan
+!*.color6:       #06989a
+!*.color14:      #34e2e2
+!
+!! white
+!*.color7:       #d3d7cf
+!*.color15:      #eeeeec
+!

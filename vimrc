@@ -10,11 +10,14 @@ set wildmenu
 set shellslash
 set grepprg=grep\ -nH\ $*
 
+hi search cterm=NONE ctermbg=grey ctermfg=black
+
 set ls=2
-set statusline=%f\ -\ FileType:\ %y
-set statusline+=%l
-set statusline+=/
-set statusline+=%L
+set t_Co=256
+"set statusline=%f\ -\ FileType:\ %y
+"set statusline+=%l
+"set statusline+=/
+"set statusline+=%L
 
 
 let g:tex_flavor='latex'
@@ -87,3 +90,6 @@ Plugin 'Shougo/neosnippet.vim'
 call vundle#end()
 filetype plugin indent on
 au Filetype * set fo-=c fo-=r fo-=o
+
+set rtp+=$HOME/.local/lib/python3.5/site-packages/powerline/bindings/vim/
+

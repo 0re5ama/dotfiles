@@ -1,6 +1,7 @@
 -- Standard awesome library
 local gears = require("gears")
 local awful = require("awful")
+local vicious = require("vicious")
 awful.rules = require("awful.rules")
 require("awful.autofocus")
 -- Widget and layout library
@@ -110,6 +111,21 @@ mylauncher = awful.widget.launcher({ image = beautiful.awesome_icon,
 menubar.utils.terminal = terminal -- Set the terminal for applications that require it
 -- }}}
 
+
+--{{{ Wibox
+--  my japclock
+
+statwidget = wibox.widget.textbox()
+
+function run_script()
+    local filedescriptor = io.popen("~/.dotfiles/statusscript.sh")
+    local value = filedescriptor:read()
+    filedescriptor:close()
+    return {value}
+end
+
+vicious.register(statwidget, run_script, '$1', 1)
+
 -- {{{ Wibox
 -- Create a textclock widget
 mytextclock = awful.widget.textclock()
@@ -193,7 +209,8 @@ for s = 1, screen.count() do
     -- Widgets that are aligned to the right
     local right_layout = wibox.layout.fixed.horizontal()
     if s == 1 then right_layout:add(wibox.widget.systray()) end
-    right_layout:add(mytextclock)
+    right_layout:add(statwidget)
+--  right_layout:add(mytextclock)
     right_layout:add(mylayoutbox[s])
 
     -- Now bring it all together (with the tasklist in the middle)
