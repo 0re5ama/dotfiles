@@ -236,6 +236,10 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey,           }, "Left",   awful.tag.viewprev       ),
     awful.key({ modkey,           }, "Right",  awful.tag.viewnext       ),
     awful.key({ modkey,           }, "Escape", awful.tag.history.restore),
+    awful.key({ }, "XF86AudioRaiseVolume", function() awful.util.spawn("amixer -D pulse sset Master 5%+", false) end),
+    awful.key({ }, "XF86AudioLowerVolume", function() awful.util.spawn("amixer -D pulse sset Master 5%-", false) end),
+    awful.key({ }, "XF86AudioMute", function() awful.util.spawn("amixer -D pulse sset Master toggle", false) end),
+
 
     awful.key({ modkey,           }, "j",
         function ()
@@ -472,3 +476,5 @@ client.connect_signal("focus", function(c) c.border_color = beautiful.border_foc
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 -- }}}
 awful.util.spawn_with_shell("/home/xer0/run_once nm-applet")
+
+
