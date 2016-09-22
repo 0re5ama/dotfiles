@@ -30,4 +30,6 @@ highlight WarningMsg background: #101010; color: #87314e;
 set hintchars=hjklasdfgyuiopqwertnmzxcvb
 source! /home/xer0/.vimperatorrc.local
 
+set cpt=sbh
+
 " vim: set ft=vimperator:
