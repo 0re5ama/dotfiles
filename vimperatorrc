@@ -30,6 +30,9 @@ highlight WarningMsg background: #101010; color: #87314e;
 set hintchars=hjklasdfgyuiopqwertnmzxcvb
 source! /home/xer0/.vimperatorrc.local
 
-set cpt=sbh
+nmap <C-s> :sav<CR>
+js services.services.autoCompleteSearch.class_="@mozilla.org/autocomplete/search;1?name=unifiedcomplete"
+
+set cpt=sbl
 
 " vim: set ft=vimperator:
