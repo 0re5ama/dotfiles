@@ -7,5 +7,6 @@ export QT_IM_MODULE=ibus &
 ibus-daemon --xim &
 mpd &
 xkbcomp -I$HOME/.xkb/ ~/.xkb/keymap/mykbd $DISPLAY & 
+source ~/.zshrc
 exec awesome
 #exec i3
