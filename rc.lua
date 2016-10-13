@@ -237,9 +237,13 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey,           }, "Right",  awful.tag.viewnext       ),
     awful.key({ modkey,           }, "Escape", awful.tag.history.restore),
     awful.key({ }, "XF86AudioPlay", function() awful.util.spawn("mpc toggle", false) end),
+    awful.key({ "Control" }, "XF86AudioPlay", function() awful.util.spawn("mpc next", false) end),
+    awful.key({ "Shift" }, "XF86AudioPlay", function() awful.util.spawn("mpc prev", false) end),
     awful.key({ }, "XF86AudioStop", function() awful.util.spawn("mpc stop", false) end),
     awful.key({ }, "XF86AudioRaiseVolume", function() awful.util.spawn("amixer -D pulse sset Master 5%+", false) end),
     awful.key({ }, "XF86AudioLowerVolume", function() awful.util.spawn("amixer -D pulse sset Master 5%-", false) end),
+	awful.key({ "Control" }, "XF86AudioRaiseVolume", function() awful.util.spawn("mpc volume +5", false) end),
+	awful.key({ "Control" }, "XF86AudioLowerVolume", function() awful.util.spawn("mpc volume -5", false) end),
     awful.key({ }, "XF86AudioMute", function() awful.util.spawn("amixer -D pulse sset Master toggle", false) end),
 
 

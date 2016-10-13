@@ -1,7 +1,8 @@
 #Dolphin icon not showing in wms
 qt5ct for dolphin colors
 
-QT_QPA_PLATFORMTHEME="QT5CT" dolphin
+install qt5ct
+QT_QPA_PLATFORMTHEME="qt5ct" dolphin
 
 add the following line to .profile
 [ "$XDG_CURRENT_DESKTOP" = "KDE" ] || [ "$XDG_CURRENT_DESKTOP" = "GNOME" ] || export QT_QPA_    PLATFORMTHEME="qt5ct
