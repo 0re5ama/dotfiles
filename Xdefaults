@@ -72,7 +72,8 @@ URxvt*xftAntialias: true
 
 ! special
 *.foreground:   #c5c8c6
-*.background:   rgba:0000/0000/0200/c800
+! *.background:   rgba:0000/0000/0200/c800
+*.background:   rgb:0000/0000/0200
 *.cursorColor:  #c5c8c6
 
 ! black

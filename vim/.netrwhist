@@ -1,3 +1,7 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =1
+let g:netrw_dirhist_cnt =5
 let g:netrw_dirhist_1='/home/xer0/.config/ranger'
+let g:netrw_dirhist_2='/home/xer0/.vim'
+let g:netrw_dirhist_3='/home/xer0/.ncmpcpp'
+let g:netrw_dirhist_4='/home/xer0/Documents/Programming/Web Development'
+let g:netrw_dirhist_5='/var/log/httpd'
