@@ -39,8 +39,8 @@ end
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
-beautiful.init("~/.dotfiles/theme.lua")
--- beautiful.init("/usr/share/awesome/themes/zenburn/theme.lua")
+-- beautiful.init("~/.dotfiles/theme.lua")
+ beautiful.init("/usr/share/awesome/themes/sky/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
 terminal = "urxvt"

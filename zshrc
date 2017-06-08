@@ -97,3 +97,4 @@ export PATH=/usr/local/texlive/2016/bin/x86_64-linux:/home/xer0/Downloads/arduin
 export MANPATH=/usr/local/texlive/2016/texmf-dist/doc/man:$MANPATH
 export INFOPATH=/usr/local/texlive/2016/texmf-dist/doc/info:$INFOPATH
 alias stdn="shutdown -P now"
+alias mpvyt="mpv --ytdl-format=135+140"

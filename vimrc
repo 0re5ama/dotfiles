@@ -85,6 +85,7 @@ Plugin 'VundleVim/Vundle.vim'
 "Insert Plugins here
 Plugin 'Shougo/neocomplete.vim'
 Plugin 'Shougo/neosnippet.vim'
+Plugin 'Shougo/newsnippet-snippets'
 
 
 call vundle#end()

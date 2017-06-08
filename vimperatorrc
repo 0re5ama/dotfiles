@@ -27,6 +27,9 @@ highlight Tag color: #005F87;
 highlight Title background-color: #0a0a0a; color: #0f829d; font-weight: bold;
 highlight URL text-decoration: none; color: #87FF00;
 highlight WarningMsg background: #101010; color: #87314e;
+
+
+
 set hintchars=hjklasdfgyuiopqwertnmzxcvb
 source! /home/xer0/.vimperatorrc.local
 
