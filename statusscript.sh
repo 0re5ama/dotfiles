@@ -4,6 +4,7 @@ span_sep='<span color="#ff8700">'  #colour for normal battery
 span_season='<span color="#b5bd68">'
 
 mon=`date +%m`
+#batt=`upower -i $(upower -e | grep 'BAT') | grep -E "percentage" | awk '{print $2}'`
 case "$mon" in
 	"09"|"10"|"11") seas="秋"
 		;;

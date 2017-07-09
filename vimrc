@@ -10,6 +10,10 @@ set wildmenu
 set shellslash
 set grepprg=grep\ -nH\ $*
 
+let g:filetype_pl="prolog"
+let NERDTreeShowHidden=1
+let g:neosnippet#disable_runtime_snippets = { "_": 1, }
+
 hi search cterm=NONE ctermbg=grey ctermfg=black
 
 set ls=2
@@ -85,7 +89,10 @@ Plugin 'VundleVim/Vundle.vim'
 "Insert Plugins here
 Plugin 'Shougo/neocomplete.vim'
 Plugin 'Shougo/neosnippet.vim'
-Plugin 'Shougo/newsnippet-snippets'
+Plugin 'Shougo/neosnippet-snippets'
+Plugin 'scrooloose/nerdtree'
+Plugin 'jwalton512/vim-blade'
+Plugin 'tpope/vim-fugitive'
 
 
 call vundle#end()
