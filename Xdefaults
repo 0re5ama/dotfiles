@@ -71,38 +71,38 @@ URxvt*xftAntialias: true
 
 
 ! special
-*.foreground:   #707070
-*.background:   #f3f3f3
-*.cursorColor:  #707070
+*.foreground:   #6d727e
+*.background:   #fef9ec
+*.cursorColor:  #6d727e
 
 ! black
-*.color0:       #d3d3d3
-*.color8:       #b3b3b3
+*.color0:       #c5c1b4
+*.color8:       #a1a6b2
 
 ! red
-*.color1:       #ef6b7b
-*.color9:       #ed5466
+*.color1:       #e75c58
+*.color9:       #b22b31
 
 ! green
-*.color2:       #a1d569
-*.color10:      #afdb80
+*.color2:       #00a250
+*.color10:      #007427
 
 ! yellow
-*.color3:       #f59335
-*.color11:      #f59335
+*.color3:       #a08a00
+*.color11:      #715f00
 
 ! blue
-*.color4:       #4ec2e8
-*.color12:      #5dc7ea
+*.color4:       #208ffb
+*.color12:      #0065ca
 
 ! magenta
-*.color5:       #fec7cd
-*.color13:      #d2a4b4
+*.color5:       #d160c4
+*.color13:      #a03196
 
 ! cyan
-*.color6:       #95c1c0
-*.color14:      #75a1a0
+*.color6:       #00a4c1
+*.color14:      #007693
 
 ! white
-*.color7:       #707070
-*.color15:      #909090
+*.color7:       #3e424d
+*.color15:      #282c36
