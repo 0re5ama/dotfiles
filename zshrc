@@ -91,6 +91,7 @@ bindkey -e
 
 autoload -U colors && colors
 export QT_QPA_PLATFORMTHEME="qt5ct"
+alias ecn="cd /srv/http/laravel/ecn/"
 export WECHALLUSER="shahbibek10"
 export WECHALLTOKEN="41E22-01000-D10C1-7C1EC-20A26-6317E"
 export PATH=/usr/local/texlive/2016/bin/x86_64-linux:/home/xer0/Downloads/arduino/arduino-1.6.11:/home/xer0/Downloads/arduino/eagle/bin:/home/xer0/.gem/ruby/2.4.0/bin:/home/xer0/.config/composer/vendor/bin:$PATH
