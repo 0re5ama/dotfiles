@@ -93,6 +93,12 @@ Plugin 'Shougo/neosnippet-snippets'
 Plugin 'scrooloose/nerdtree'
 Plugin 'jwalton512/vim-blade'
 Plugin 'tpope/vim-fugitive'
+Plugin 'nikvdp/ejs-syntax'
+Plugin 'pangloss/vim-javascript'
+Plugin 'briancollins/vim-jst'
+Plugin 'maksimr/vim-jsbeautify'
+Plugin 'einars/js-beautify'
+
 
 
 call vundle#end()
