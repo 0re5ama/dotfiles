@@ -240,6 +240,8 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey,           }, "Right",  awful.tag.viewnext       ),
     awful.key({ modkey,           }, "Escape", awful.tag.history.restore),
     awful.key({ }, "XF86AudioPlay", function() awful.util.spawn("mpc toggle", false) end),
+    awful.key({ }, "#232", function() awful.util.spawn("xbacklight -dec 10", false) end),
+    awful.key({ }, "#233", function() awful.util.spawn("xbacklight -inc 10", false) end),
     awful.key({ "Control" }, "XF86AudioPlay", function() awful.util.spawn("mpc next", false) end),
     awful.key({ "Shift" }, "XF86AudioPlay", function() awful.util.spawn("mpc prev", false) end),
     awful.key({ }, "XF86AudioStop", function() awful.util.spawn("mpc stop", false) end),
@@ -405,6 +407,8 @@ awful.rules.rules = {
     -- Set Firefox to always map on tags number 9 of screen 1.
     { rule = { class = "Firefox" },
       properties = { tag = tags[1][9] } },
+    { rule = { class = "Anki" },
+      properties = { tag = tags[1][4] } },
     { rule = { class = "Zathura" },
       properties = { tag = tags[1][5] } },
     { rule = { class = "Thunderbird" },

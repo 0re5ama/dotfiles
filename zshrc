@@ -7,7 +7,7 @@
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="wezm"
+ZSH_THEME="Soliah"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -94,9 +94,9 @@ export QT_QPA_PLATFORMTHEME="qt5ct"
 alias ecn="cd /srv/http/laravel/ecn/"
 export WECHALLUSER="shahbibek10"
 export WECHALLTOKEN="41E22-01000-D10C1-7C1EC-20A26-6317E"
-export PATH=/usr/lib/node_modules:/usr/local/texlive/2016/bin/x86_64-linux:/home/xer0/Downloads/arduino/arduino-1.6.11:/home/xer0/Downloads/arduino/eagle/bin:/home/xer0/.gem/ruby/2.4.0/bin:/home/xer0/.config/composer/vendor/bin:$PATH
+export PATH=/home/xer0/.npm-global/:/usr/lib/node_modules:/usr/local/texlive/2016/bin/x86_64-linux:/home/xer0/Downloads/arduino/arduino-1.6.11:/home/xer0/Downloads/arduino/eagle/bin:/home/xer0/.gem/ruby/2.4.0/bin:/home/xer0/.config/composer/vendor/bin:$PATH
 export MANPATH=/usr/local/texlive/2016/texmf-dist/doc/man:$MANPATH
 export INFOPATH=/usr/local/texlive/2016/texmf-dist/doc/info:$INFOPATH
-export NODE_PATH=/usr/lib/node_modules
+export NODE_PATH=~/.npm-global/lib/node_modules
 alias stdn="shutdown -P now"
 alias mpvyt="mpv --ytdl-format=135+140"
