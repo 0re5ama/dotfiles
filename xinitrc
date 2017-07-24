@@ -10,5 +10,6 @@ ibus-daemon --xim &
 mpd &
 xkbcomp -I$HOME/.xkb/ ~/.xkb/keymap/mykbd $DISPLAY & 
 source ~/.zshrc
+screen -d -m -fa -S rtorrent /usr/bin/rtorrent
 exec awesome
 #exec i3
