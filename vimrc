@@ -1,7 +1,8 @@
 "set foldmethod=syntax
-set tabstop=4
-set shiftwidth=4
-set noexpandtab
+set tabstop=2
+set shiftwidth=2
+"set noexpandtab
+set expandtab
 set autoindent
 set cindent
 set number
@@ -99,6 +100,8 @@ Plugin 'briancollins/vim-jst'
 Plugin 'maksimr/vim-jsbeautify'
 Plugin 'einars/js-beautify'
 Plugin 'digitaltoad/vim-pug'
+Plugin 'leafgarland/typescript-vim'
+Plugin 'burnettk/vim-angular'
 
 
 

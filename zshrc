@@ -92,7 +92,9 @@ bindkey -e
 autoload -U colors && colors
 export QT_QPA_PLATFORMTHEME="qt5ct"
 alias ecn="cd /srv/http/laravel/ecn/"
-alias mdn="cd /srv/http/nodeJS/mdntut/"
+alias pcs="cd /srv/http/laravel/pcs/"
+alias sp="cd /srv/http/nodeJS/sp/"
+alias flood="/srv/torrent/flood/run.sh"
 alias browser-sync="node ~/.npm-global/lib/node_modules/browser-sync/bin/browser-sync.js"
 export WECHALLUSER="shahbibek10"
 export WECHALLTOKEN="41E22-01000-D10C1-7C1EC-20A26-6317E"
