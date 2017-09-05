@@ -295,9 +295,10 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey, "Control" }, "n", awful.client.restore),
 
     -- Prompt
-    -- awful.key({ modkey },            "r",     function () awful.util.spawn("notify-send "..tostring(mouse.screen), false) end),
+    -- awful.key({ modkey },            "r",     function () awful.util.spawn("notify-send "..tostring(mypromptbox[1]), false) end),
     -- awful.key({ modkey },            "r",     function () mypromptbox[mouse.screen]:run() end),
-	awful.key({ modkey },				"r",	function() menubar.show() end),
+    awful.key({ modkey },            "r",     function () mypromptbox[1]:run() end),
+    -- awful.key({ modkey },				"r",	function() menubar.show() end),
 
     awful.key({ modkey }, "x",
               function ()
