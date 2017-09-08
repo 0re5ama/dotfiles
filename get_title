@@ -1,0 +1,2 @@
+#!/bin/sh
+xtitle | cut -c1-66 
