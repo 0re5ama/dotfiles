@@ -1,0 +1,6 @@
+synclient touchpadoff=1
+synclient touchpadoff=0
+
+
+xinput list
+xinput set-prop 15 "Device Enabled" 0

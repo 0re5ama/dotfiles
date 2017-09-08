@@ -1,0 +1,5 @@
+powercfg /h off
+Using regedit, add a DWORD value with hexadecimal value 1 to the registry:
+
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\TimeZoneInformation\RealTimeIsUniversal
+

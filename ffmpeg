@@ -1,0 +1,8 @@
+for i in *.mp4; do ffmpeg -i "$i" -vn -c:a copy "${i%.mp4}.m4a; done
+ffmpeg -i INPUT.mkv -c:v libx265 -preset ultrafast -x265-params lossless=1 OUTPUT.mkv
+ffmpeg -i INPUT.mkv -c:v libx265 -preset ultrafast -x265-params crf=25 OUTPUT.mkv
+
+//Recording audio
+ffmpeg -f pulse -i alsa_input.pci-0000_00_1b.0.analog-stereo -c:a libmp3lame output1.mkv
+
+

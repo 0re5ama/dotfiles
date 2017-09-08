@@ -1,0 +1,12 @@
+#!/bin/sh
+
+green=`tput setaf 2`
+nc=`tput sgr0`
+if [ "$1" = "g" ]
+then
+	echo "Pinging ${green}youtube.com${nc}"
+	ping www.youtube.com | awk '{printf "%s ms\n", substr($8,6)}'
+else
+	echo "Pinging ${green}Steamcommunity.com${nc}"
+	ping www.steamcommunity.com | awk '{printf "%s ms\n", substr($8,6)}'
+fi
