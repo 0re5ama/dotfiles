@@ -25,7 +25,7 @@ set t_Co=256
 "set statusline+=%L
 
 
-let g:tex_flavor='latex'
+"let g:tex_flavor='latex'
 
 let g:neocomplete#enable_at_startup = 1
 
@@ -88,9 +88,9 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 "Insert Plugins here
-Plugin 'Shougo/neocomplete.vim'
-Plugin 'Shougo/neosnippet.vim'
-Plugin 'Shougo/neosnippet-snippets'
+"Plugin 'Shougo/neocomplete.vim'
+"Plugin 'Shougo/neosnippet.vim'
+"Plugin 'Shougo/neosnippet-snippets'
 Plugin 'scrooloose/nerdtree'
 Plugin 'jwalton512/vim-blade'
 Plugin 'tpope/vim-fugitive'
@@ -100,8 +100,8 @@ Plugin 'briancollins/vim-jst'
 Plugin 'maksimr/vim-jsbeautify'
 Plugin 'einars/js-beautify'
 Plugin 'digitaltoad/vim-pug'
-Plugin 'leafgarland/typescript-vim'
-Plugin 'burnettk/vim-angular'
+"Plugin 'leafgarland/typescript-vim'
+"Plugin 'burnettk/vim-angular'
 
 
 

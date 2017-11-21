@@ -75,11 +75,28 @@ local layouts =
 
 
 -- {{{ Wallpaper
-if beautiful.wallpaper then
+wp_index = 1
+wp_timeout = 15
+wp_path = "/home/xer0/Pictures/walls/"
+wp_files = { "01.jpg", "04.jpg", "05.jpg", "07.jpg" }
+
+wp_timer = timer { timeout = wp_timeout }
+wp_timer:connect_signal("timeout", function()
     for s = 1, screen.count() do
-        gears.wallpaper.maximized(beautiful.wallpaper, s, true)
+        gears.wallpaper.maximized(wp_path .. wp_files[wp_index], s, true)
     end
-end
+    wp_timer:stop()
+    wp_index = math.random( 1, #wp_files )
+    wp_timer.timeout = wp_timeout
+    wp_timer:start()
+end)
+wp_timer:start()
+
+-- if beautiful.wallpaper then
+--     for s = 1, screen.count() do
+--         gears.wallpaper.maximized(beautiful.wallpaper, s, true)
+--     end
+-- end
 -- }}}
 
 -- {{{ Tags
@@ -213,7 +230,7 @@ for s = 1, screen.count() do
     if s == 1 then right_layout:add(wibox.widget.systray()) end
     right_layout:add(statwidget)
 --  right_layout:add(mytextclock)
-	right_layout:add(battery_widget)
+    right_layout:add(battery_widget)
     right_layout:add(mylayoutbox[s])
 
     -- Now bring it all together (with the tasklist in the middle)
@@ -239,6 +256,7 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey,           }, "Left",   awful.tag.viewprev       ),
     awful.key({ modkey,           }, "Right",  awful.tag.viewnext       ),
     awful.key({ modkey,           }, "Escape", awful.tag.history.restore),
+    awful.key({ }, "Print", function() awful.util.spawn("/home/xer0/.dotfiles/scrot", false) end),
     awful.key({ }, "XF86AudioPlay", function() awful.util.spawn("mpc toggle", false) end),
     awful.key({ }, "#232", function() awful.util.spawn("xbacklight -dec 10", false) end),
     awful.key({ }, "#233", function() awful.util.spawn("xbacklight -inc 10", false) end),
@@ -408,6 +426,8 @@ awful.rules.rules = {
       properties = { floating = true } },
     -- Set Firefox to always map on tags number 9 of screen 1.
     { rule = { class = "Firefox" },
+      properties = { tag = tags[1][9] } },
+    { rule = { class = "Nightly" },
       properties = { tag = tags[1][9] } },
     { rule = { class = "Anki" },
       properties = { tag = tags[1][4] } },

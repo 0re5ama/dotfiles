@@ -9,7 +9,7 @@ port_range = 50000-50000
 port_random = no
 
 # Watch a directory for new torrents
-schedule = watch_directory,5,5,load_start=$HOME/Downloads/*.torrent
+#schedule = watch_directory,5,5,load_start=$HOME/Downloads/*.torrent
 
 #Check the hash after the end of the download
 check_hash = yes

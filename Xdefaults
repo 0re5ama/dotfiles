@@ -37,7 +37,7 @@ URxvt.inputMethod:  ibus
 URxvt.allow_bold:           true
 /* URxvt.font:                 -*-sansserif-medium-r-normal-*-12-120-72-72-c-60-iso8859-1 */
 !urxvt*font: xft:Terminus:pixelsize=13:antialias=true:hinting=true,xft:Inconsolata\ for\ Powerline:pixelsize=13
-URxvt*font: xft:Source\ Code\ Pro\ Medium:pixelsize=15:antialias=true:hinting=true,xft:Source\ Code\ Pro\ Medium:pixelsize=15:antialias=true:hinting=true,xft:Terminus:pixelsize=15:antialias=true:hinting=true
+URxvt*font: xft:Source\ Code\ Pro\ Medium:pixelsize=15:antialias=true:hinting=true,xft:Source\ Code\ Pro\ Medium:pixelsize=15:antialias=true:hinting=true,xft:Terminus:pixelsize=15:antialias=true:hinting=true,xft:Noto\ Sans\ Devanagari:pixelsize=25:antialias=true:hinting=true
 URxvt*boldFont: xft:Source\ Code\ Pro:style=bold:pixelsize=15:hinting=true:antialias=true
 URxvt*italicFont: xft:Soure\ Code\ Pro:style=italic:pixelsize=15:hinting=true:antialias=true
 !URxvt*font: xft:Hack:pixelsize=10:antialias=true:hinting=true
@@ -53,7 +53,7 @@ URxvt.scrollBar:            false
 ! Perl extensions
 URxvt.perl-ext-common:      default,matcher
 URxvt.matcher.button:       1
-URxvt.url-launcher:          firefox
+URxvt.url-launcher:          firefox-nightly
 
 ! Cursor
 URxvt.cursorBlink:          true
