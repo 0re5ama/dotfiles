@@ -1,3 +1,4 @@
+-- vim: set tabstop=4 set shiftwidth=4
 -- Standard awesome library
 local gears = require("gears")
 local awful = require("awful")
@@ -75,10 +76,19 @@ local layouts =
 
 
 -- {{{ Wallpaper
+function scandir(directory)
+    local i, t, popen=0, {}, io.popen
+    for filename in popen('ls -a "'..directory..'"'):lines() do
+        i = i + 1
+        t[i] = filename
+    end
+    return t
+end
+
 wp_index = 1
 wp_timeout = 15
 wp_path = "/home/xer0/Pictures/walls/"
-wp_files = { "01.jpg", "04.jpg", "05.jpg", "07.jpg" }
+wp_files = scandir(wp_path)
 
 wp_timer = timer { timeout = wp_timeout }
 wp_timer:connect_signal("timeout", function()
@@ -86,7 +96,7 @@ wp_timer:connect_signal("timeout", function()
         gears.wallpaper.maximized(wp_path .. wp_files[wp_index], s, true)
     end
     wp_timer:stop()
-    wp_index = math.random( 1, #wp_files )
+    wp_index = math.random(1, #wp_files)
     wp_timer.timeout = wp_timeout
     wp_timer:start()
 end)
@@ -413,6 +423,7 @@ awful.rules.rules = {
                      focus = awful.client.focus.filter,
                      raise = true,
                      keys = clientkeys,
+                     size_hints_honor = false,
                      buttons = clientbuttons } },
     { rule = { class = "MPlayer" },
       properties = { floating = true } },
@@ -508,8 +519,14 @@ client.connect_signal("manage", function (c, startup)
     end
 end)
 
-client.connect_signal("focus", function(c) c.border_color = beautiful.border_focus end)
-client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
+client.connect_signal("focus", function(c)
+    c.border_color = beautiful.border_focus
+    c.opacity = 1
+end)
+client.connect_signal("unfocus", function(c)
+    c.border_color = beautiful.border_normal
+    c.opacity = 1
+end)
 -- }}}
 -- awful.util.spawn_with_shell("/home/xer0/run_once nm-applet")
 

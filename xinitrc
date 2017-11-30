@@ -9,8 +9,9 @@ export QT_IM_MODULE=ibus &
 ibus-daemon --xim &
 mpd &
 xkbcomp -I$HOME/.xkb/ ~/.xkb/keymap/mykbd $DISPLAY & 
-source ~/.zshrc
-screen -d -m -fa -S rtorrent /usr/bin/rtorrent
-sudo ntpdate -u 0.pool.ntp.org
+source ~/.zshrc &
+screen -d -m -fa -S rtorrent /usr/bin/rtorrent &
+sudo ntpdate -u 0.pool.ntp.org &
+#exec openbox-session
 exec awesome
 #exec i3

@@ -6,6 +6,7 @@ theme = {}
 
 theme.font          = "Ubuntu 8"
 
+theme.useless_gap   = 0
 theme.bg_normal     = "#1B1D1E"
 theme.bg_focus      = "#1B1D1E"
 theme.bg_urgent     = "#1B1D1E"
@@ -17,7 +18,7 @@ theme.fg_focus      = "#A6E22E"
 theme.fg_urgent     = "#F92672"
 theme.fg_minimize   = "#75715E"
 
-theme.border_width  = 0
+theme.border_width  = 1
 theme.border_normal = "#000000"
 theme.border_focus  = "#535d6c"
 theme.border_marked = "#91231c"
