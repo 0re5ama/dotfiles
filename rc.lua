@@ -70,7 +70,11 @@ local layouts =
     awful.layout.suit.spiral.dwindle,
     awful.layout.suit.max,
     awful.layout.suit.max.fullscreen,
-    awful.layout.suit.magnifier
+    awful.layout.suit.magnifier,
+    awful.layout.suit.corner.nw,
+    awful.layout.suit.corner.sw,
+    awful.layout.suit.corner.ne,
+    awful.layout.suit.corner.se
 }
 -- }}}
 
@@ -429,6 +433,8 @@ awful.rules.rules = {
       properties = { floating = true } },
     { rule = { class = "pinentry" },
       properties = { floating = true } },
+    { rule = { class = "DDLC" },
+      properties = { fullscreen = true } },
     { rule = { class = "gimp" },
       properties = { floating = true } },
     { rule = { class = "mpv" },

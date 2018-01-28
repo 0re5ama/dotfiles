@@ -89,6 +89,10 @@ theme.layout_tile = "/usr/share/awesome/themes/default/layouts/tilew.png"
 theme.layout_tiletop = "/usr/share/awesome/themes/default/layouts/tiletopw.png"
 theme.layout_spiral  = "/usr/share/awesome/themes/default/layouts/spiralw.png"
 theme.layout_dwindle = "/usr/share/awesome/themes/default/layouts/dwindlew.png"
+theme.layout_cornerne = "/usr/share/awesome/themes/default/layouts/cornernew.png"
+theme.layout_cornerse = "/usr/share/awesome/themes/default/layouts/cornersew.png"
+theme.layout_cornersw = "/usr/share/awesome/themes/default/layouts/cornersww.png"
+theme.layout_cornernw = "/usr/share/awesome/themes/default/layouts/cornernww.png"
 
 theme.awesome_icon = "/usr/share/awesome/icons/awesome16.png"
 

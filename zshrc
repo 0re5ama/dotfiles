@@ -103,6 +103,7 @@ export MANPATH=/usr/local/texlive/2016/texmf-dist/doc/man:$MANPATH
 export INFOPATH=/usr/local/texlive/2016/texmf-dist/doc/info:$INFOPATH
 export NODE_PATH=~/.npm-global/lib/node_modules
 alias stdn="shutdown -P now"
+alias ddlc="/media/xer0/sda4/DDLC-1.1.0-pc/DDLC.sh"
 alias mpvyt="mpv --ytdl-format=135+140"
 if [ -z "$DISPLAY" ] && [ -n "$XDG_VTNR" ] && [ "$XDG_VTNR" -eq 1 ]; then
   exec startx
