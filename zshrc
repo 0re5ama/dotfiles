@@ -105,8 +105,8 @@ export NODE_PATH=~/.npm-global/lib/node_modules
 alias stdn="shutdown -P now"
 alias ddlc="/media/xer0/sda4/DDLC-1.1.0-pc/DDLC.sh"
 alias mpvyt="mpv --ytdl-format=135+140"
-if [ -z "$DISPLAY" ] && [ -n "$XDG_VTNR" ] && [ "$XDG_VTNR" -eq 1 ]; then
-  exec startx
-fi
+# if [ -z "$DISPLAY" ] && [ -n "$XDG_VTNR" ] && [ "$XDG_VTNR" -eq 1 ]; then
+  # exec startx
+# fi
 eval `perl -I ~/perl5/lib/perl5 -Mlocal::lib`
 export MANPATH=$HOME/perl5/man:$MANPATH

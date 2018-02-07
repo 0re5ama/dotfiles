@@ -11,6 +11,8 @@ set wildmenu
 set shellslash
 set grepprg=grep\ -nH\ $*
 
+runtime macros/matchit.vim
+
 let g:filetype_pl="prolog"
 let NERDTreeShowHidden=1
 let g:neosnippet#disable_runtime_snippets = { "_": 1, }
