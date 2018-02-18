@@ -16,4 +16,4 @@ case "$mon" in
 		;;
 esac
 
-echo $span_lo`LANG=ja_JP.UTF-8 date "+%Y年%b%d日(%a)"`' - </span>'$span_hi`date +"%H:%M:%S"`'</span>' $span_season$seas '</span>'
+echo $span_lo`LANG=ja_JP.UTF-8 date "+%Y年%b%d日(%a)"`' - </span>'$span_hi`date +"%H:%M"`'</span>' $span_season$seas '</span>'

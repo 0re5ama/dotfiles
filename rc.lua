@@ -45,7 +45,7 @@ end
  beautiful.init("~/.dotfiles/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
-terminal = "urxvt"
+terminal = "urxvtc"
 editor = os.getenv("EDITOR") or "vim"
 editor_cmd = terminal .. " -e " .. editor
 
@@ -157,7 +157,7 @@ function run_script()
     return {value}
 end
 
-vicious.register(statwidget, run_script, '$1', 1)
+vicious.register(statwidget, run_script, '$1', 5)
 
 -- {{{ Wibox
 -- Create a textclock widget
