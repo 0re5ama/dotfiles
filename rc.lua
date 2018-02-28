@@ -89,6 +89,10 @@ function scandir(directory)
     return t
 end
 
+for s = 1, screen.count() do
+    gears.wallpaper.maximized("/home/xer0/Pictures/walls/crow.jpg", s, true)
+end
+
 wp_index = 1
 wp_timeout = 15
 wp_path = "/home/xer0/Pictures/walls/"
