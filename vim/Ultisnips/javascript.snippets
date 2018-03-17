@@ -1,9 +1,19 @@
 snippet ko "ko observable" b
-self.$1 = ko.observable($2);
+self.$1 = ko.observable(${2:null});
 $0
 endsnippet
 
 snippet koa "ko observable Array" b
-self.$1 = ko.observableArray($2);
+self.$1 = ko.observableArray([$2]);
+$0
+endsnippet
+
+snippet kod "ko observable Data" b
+self.$1 = ko.observable(data.$1);
+$0
+endsnippet
+
+snippet koda "ko observable Data Array" b
+self.$1 = ko.observableArray(data.$1);
 $0
 endsnippet
