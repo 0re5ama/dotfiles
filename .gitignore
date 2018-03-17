@@ -1,3 +1,4 @@
 vimperator/info/default/*
 *.swp
 vim/bundle/*
+vim/swap/*

@@ -14,8 +14,8 @@ set grepprg=grep\ -nH\ $*
 runtime macros/matchit.vim
 
 let g:filetype_pl="prolog"
+let g:autofmt_autosave = 1
 let NERDTreeShowHidden=1
-let g:neosnippet#disable_runtime_snippets = { "_": 1, }
 
 hi search cterm=NONE ctermbg=grey ctermfg=black
 
@@ -29,7 +29,7 @@ set t_Co=256
 
 "let g:tex_flavor='latex'
 
-let g:neocomplete#enable_at_startup = 1
+"let g:neocomplete#enable_at_startup = 1
 
 "search settings
 set hlsearch
@@ -72,6 +72,9 @@ function! FoldToggle()
 endfunc
 
 nnoremap <leader>f :call FoldToggle()<cr>
+nnoremap <leader>g :YcmCompleter GoTo<cr>
+nnoremap <leader>D :YcmCompleter GetDoc<cr>
+nnoremap <F5> :!cargo run<cr>
 "C-n to toggle between relative and numbering
 function! NumberToggle()
       if(&relativenumber == 1)
@@ -90,9 +93,6 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 "Insert Plugins here
-"Plugin 'Shougo/neocomplete.vim'
-"Plugin 'Shougo/neosnippet.vim'
-"Plugin 'Shougo/neosnippet-snippets'
 Plugin 'scrooloose/nerdtree'
 Plugin 'jwalton512/vim-blade'
 Plugin 'tpope/vim-fugitive'
@@ -101,15 +101,28 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'briancollins/vim-jst'
 Plugin 'maksimr/vim-jsbeautify'
 Plugin 'einars/js-beautify'
-Plugin 'digitaltoad/vim-pug'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'SirVer/ultisnips'
+"Plugin 'digitaltoad/vim-pug'
 "Plugin 'leafgarland/typescript-vim'
 "Plugin 'burnettk/vim-angular'
 
-
+let g:UltiSnipsSnippetDirectories=['~/.vim/Ultisnips', 'Ultisnips']
+let g:UltiSnipsExpandTrigger='<c-space>'
+let g:UltiSnipsJumpForwardTrigger="<c-l>"
+let g:UltiSnipsJumpBackwardTrigger="<c-h>"
+let g:UltiSnipsEditSplit="vertical"
 
 call vundle#end()
 filetype plugin indent on
 au Filetype * set fo-=c fo-=r fo-=o
+
+let g:ctrlp_show_hidden = 1
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/](\.git$|\.hg$|\.svn$|target)',
+  \ 'file': '\v\.(exe|so|dll)$',
+  \ }
 
 set rtp+=$HOME/.local/lib/python3.5/site-packages/powerline/bindings/vim/
 
