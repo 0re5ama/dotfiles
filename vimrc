@@ -75,16 +75,8 @@ nnoremap <leader>f :call FoldToggle()<cr>
 nnoremap <leader>g :YcmCompleter GoTo<cr>
 nnoremap <leader>D :YcmCompleter GetDoc<cr>
 nnoremap <F5> :!cargo run<cr>
-"C-n to toggle between relative and numbering
-function! NumberToggle()
-      if(&relativenumber == 1)
-          set norelativenumber
-      else         
-          set relativenumber    
-      endif
-endfunc         
 
-nnoremap <leader>n :call NumberToggle()<cr>
+nnoremap <leader>n :NERDTreeToggle<cr>
 
 "Plugins section
 set nocompatible
