@@ -1,0 +1,18 @@
+#!/bin/sh
+
+green=`tput setaf 2`
+nc=`tput sgr0`
+addr="www.steamcommunity.com" 
+if  [[ "$1" == "g"  ||  "$1" == "y" ]]
+then
+  addr="www.youtube.com"
+elif [ "$1" ]
+then
+  addr=$1
+else
+  addr="www.steamcommunity.com" 
+fi
+echo -n "Pinging ${green}$addr${nc} "
+ping $addr | awk '{ print $3 ; exit }'
+# resolveip $addr | perl -lne '$_ =~ /(\d*\.){3}\d*/; print $&'
+ping $addr | perl -ne ' print if s/.+time=(.+) ms/\1 ms/g'

@@ -447,6 +447,8 @@ awful.rules.rules = {
       properties = { tag = tags[1][7] } },
     { rule = { class = "Galculator" },
       properties = { floating = true } },
+    { rule = { class = "Qalculate-gtk" },
+      properties = { floating = true } },
     -- Set Firefox to always map on tags number 9 of screen 1.
     { rule = { class = "Firefox" },
       properties = { tag = tags[1][9] } },

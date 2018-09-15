@@ -1,6 +1,6 @@
 "set foldmethod=syntax
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 "set noexpandtab
 set expandtab
 set autoindent
@@ -96,6 +96,7 @@ Plugin 'einars/js-beautify'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'SirVer/ultisnips'
+Plugin 'mustache/vim-mustache-handlebars'
 "Plugin 'digitaltoad/vim-pug'
 "Plugin 'leafgarland/typescript-vim'
 "Plugin 'burnettk/vim-angular'
