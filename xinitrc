@@ -8,11 +8,18 @@ export XMODIFIERS=@im=ibus &
 export QT_IM_MODULE=ibus &
 ibus-daemon --xim &
 mpd &
+mpdscribble &
 xkbcomp -I$HOME/.xkb/ ~/.xkb/keymap/mykbd $DISPLAY & 
 source ~/.zshrc &
 screen -d -m -fa -S rtorrent /usr/bin/rtorrent &
 sudo ntpdate -u 0.pool.ntp.org &
 urxvtd &
-#exec openbox-session
-exec awesome
-#exec i3
+dunst &
+
+## For openbox
+nitrogen --restore &
+# exec openbox-session
+
+# exec startfluxbox
+# exec awesome
+exec i3

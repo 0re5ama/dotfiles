@@ -1,0 +1,4 @@
+cat   bat
+grep  ripgrep   rg
+ls    exa
+find  fd

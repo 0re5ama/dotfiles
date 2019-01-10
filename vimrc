@@ -77,6 +77,7 @@ nnoremap <leader>D :YcmCompleter GetDoc<cr>
 nnoremap <F5> :!cargo run<cr>
 
 nnoremap <leader>n :NERDTreeToggle<cr>
+nnoremap <leader>m :MundoToggle<cr>
 
 "Plugins section
 set nocompatible
@@ -97,6 +98,8 @@ Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'SirVer/ultisnips'
 Plugin 'mustache/vim-mustache-handlebars'
+Plugin 'simnalamburt/vim-mundo'
+Plugin 'tpope/vim-speeddating'
 "Plugin 'digitaltoad/vim-pug'
 "Plugin 'leafgarland/typescript-vim'
 "Plugin 'burnettk/vim-angular'

@@ -9,21 +9,27 @@ port_range = 50000-50000
 port_random = no
 
 # Watch a directory for new torrents
-#schedule = watch_directory,5,5,load_start=$HOME/Downloads/*.torrent
-
+# schedule = watch_directory,5,5,load_start=$HOME/Downloads/*.torrent
+# */
 #Check the hash after the end of the download
 check_hash = yes
 
 #Enable DHT (for torrents withoout trackers)
 dht = auto
 dht_port = 6881
-peer_exchange = yes
+protocol.pex.set = yes
 
 #Authorize UDP trackers
-use_udp_trackers = yes
+trackers.use_udp.set = yes
 
 #Enable encryption when possible
 encryption = allow_incoming,try_outgoing,enable_retry
 
 #SCGI port, used to communicate with Flood
-scgi_port = localhost:5000
+#scgi_port = localhost:5000
+
+log.xmlrpc = /srv/torrent/xmlrpc.log
+
+encryption = allow_incoming,require,require_rc4
+encoding_list = UTF-8
+scgi_local = /srv/torrent/scgi.socket

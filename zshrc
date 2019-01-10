@@ -107,6 +107,7 @@ alias stdn="shutdown -P now"
 alias ddlc="/media/xer0/sda4/DDLC-1.1.0-pc/DDLC.sh"
 alias mpvyt="mpv --ytdl-format=135+140"
 alias tm="cd ~/Documents/Programming/rust/codewars/hackerrank && tmux a"
+alias q="QHOME=~/q rlwrap -r ~/q/l64/q"
 # if [ -z "$DISPLAY" ] && [ -n "$XDG_VTNR" ] && [ "$XDG_VTNR" -eq 1 ]; then
   # exec startx
 # fi

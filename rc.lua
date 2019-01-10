@@ -80,41 +80,41 @@ local layouts =
 
 
 -- {{{ Wallpaper
-function scandir(directory)
-    local i, t, popen=0, {}, io.popen
-    for filename in popen('ls -a "'..directory..'"'):lines() do
-        i = i + 1
-        t[i] = filename
-    end
-    return t
-end
-
-for s = 1, screen.count() do
-    gears.wallpaper.maximized("/home/xer0/Pictures/walls/crow.jpg", s, true)
-end
-
-wp_index = 1
-wp_timeout = 15
-wp_path = "/home/xer0/Pictures/walls/"
-wp_files = scandir(wp_path)
-
-wp_timer = timer { timeout = wp_timeout }
-wp_timer:connect_signal("timeout", function()
-    for s = 1, screen.count() do
-        gears.wallpaper.maximized(wp_path .. wp_files[wp_index], s, true)
-    end
-    wp_timer:stop()
-    wp_index = math.random(1, #wp_files)
-    wp_timer.timeout = wp_timeout
-    wp_timer:start()
-end)
-wp_timer:start()
-
--- if beautiful.wallpaper then
---     for s = 1, screen.count() do
---         gears.wallpaper.maximized(beautiful.wallpaper, s, true)
+-- function scandir(directory)
+--     local i, t, popen=0, {}, io.popen
+--     for filename in popen('ls -a "'..directory..'"'):lines() do
+--         i = i + 1
+--         t[i] = filename
 --     end
+--     return t
 -- end
+-- 
+-- for s = 1, screen.count() do
+--     gears.wallpaper.maximized("/home/xer0/Pictures/walls/crow.jpg", s, true)
+-- end
+-- 
+-- wp_index = 1
+-- wp_timeout = 15
+-- wp_path = "/home/xer0/Pictures/walls/"
+-- wp_files = scandir(wp_path)
+-- 
+-- wp_timer = timer { timeout = wp_timeout }
+-- wp_timer:connect_signal("timeout", function()
+--     for s = 1, screen.count() do
+--         gears.wallpaper.maximized(wp_path .. wp_files[wp_index], s, true)
+--     end
+--     wp_timer:stop()
+--     wp_index = math.random(1, #wp_files)
+--     wp_timer.timeout = wp_timeout
+--     wp_timer:start()
+-- end)
+-- wp_timer:start()
+
+if beautiful.wallpaper then
+    for s = 1, screen.count() do
+        gears.wallpaper.maximized(beautiful.wallpaper, s, true)
+    end
+end
 -- }}}
 
 -- {{{ Tags
@@ -452,6 +452,8 @@ awful.rules.rules = {
     -- Set Firefox to always map on tags number 9 of screen 1.
     { rule = { class = "Firefox" },
       properties = { tag = tags[1][9] } },
+    { rule = { class = "Steam" },
+      properties = { tag = tags[1][2] } },
     { rule = { class = "Nightly" },
       properties = { tag = tags[1][9], floating = true } },
     { rule = { class = "Anki" },
