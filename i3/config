@@ -137,14 +137,16 @@ bindsym $mod+a focus parent
 #bindsym $mod+d focus child
 
 
-bindsym XF86AudioRaiseVolume    exec amixer -D pulse sset Master 2%+
-bindsym XF86AudioLowerVolume    exec amixer -D pulse sset Master 2%-
-bindsym XF86MonBrightnessUp     exec xbacklight -inc 10
-bindsym XF86MonBrightnessDown   exec xbacklight -dec 10
-bindsym XF86AudioPrev           exec mpc prev
-bindsym XF86AudioPlay           exec mpc toggle
-bindsym XF86AudioNext           exec mpc next
-bindsym XF86AudioMute           exec amixer -D pulse sset Master toggle
+bindsym XF86AudioRaiseVolume          exec amixer -D pulse sset Master 2%+
+bindsym XF86AudioLowerVolume          exec amixer -D pulse sset Master 2%-
+bindsym Control+XF86AudioRaiseVolume    exec mpc volume +5
+bindsym Control+XF86AudioLowerVolume    exec mpc volume -5
+bindsym XF86MonBrightnessUp           exec xbacklight -inc 10
+bindsym XF86MonBrightnessDown         exec xbacklight -dec 10
+bindsym XF86AudioPrev                 exec mpc prev
+bindsym XF86AudioPlay                 exec mpc toggle
+bindsym XF86AudioNext                 exec mpc next
+bindsym XF86AudioMute                 exec amixer -D pulse sset Master toggle
 
 
 # switch to workspace
