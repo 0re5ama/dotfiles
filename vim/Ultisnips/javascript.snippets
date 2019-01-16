@@ -17,3 +17,13 @@ snippet koda "ko observable Data Array" b
 self.$1 = ko.observableArray(data.$1);
 $0
 endsnippet
+
+snippet ready "document.ready vanilla" b
+document.addEventListener('DOMContentLoaded', function () {
+  $0
+}
+endsnippet
+
+snippet get "Get Elements"
+document.getElement${1/(T)|(C)|.*/(?1:s)(?2:s)/}By${1:T}${1/(T)|(I)|(C).*/(?1:agName)(?2:d)(?3:lassName)/}('$2')
+endsnippet
