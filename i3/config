@@ -66,6 +66,7 @@ assign [class="google-chrome"] $workspace7
 assign [class="chromium"] $workspace7
 
 for_window[class="mpv"] floating enable
+for_window[class="Xboard"] floating enable
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod

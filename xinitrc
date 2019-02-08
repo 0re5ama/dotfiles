@@ -14,12 +14,12 @@ source ~/.zshrc &
 screen -d -m -fa -S rtorrent /usr/bin/rtorrent &
 sudo ntpdate -u 0.pool.ntp.org &
 urxvtd &
-dunst &
 
 ## For openbox
-nitrogen --restore &
+# nitrogen --restore &
+# dunst &
 # exec openbox-session
 
 # exec startfluxbox
-# exec awesome
-exec i3
+exec awesome
+# exec i3

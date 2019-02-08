@@ -100,6 +100,7 @@ Plugin 'SirVer/ultisnips'
 Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'simnalamburt/vim-mundo'
 Plugin 'tpope/vim-speeddating'
+Plugin 'mxw/vim-jsx'
 "Plugin 'digitaltoad/vim-pug'
 "Plugin 'leafgarland/typescript-vim'
 "Plugin 'burnettk/vim-angular'
@@ -116,7 +117,7 @@ au Filetype * set fo-=c fo-=r fo-=o
 
 let g:ctrlp_show_hidden = 1
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/](\.git$|\.hg$|\.svn$|target)',
+  \ 'dir':  '\v[\/](\.git$|\.hg$|\.svn$|target|node_modules)',
   \ 'file': '\v\.(exe|so|dll)$',
   \ }
 
