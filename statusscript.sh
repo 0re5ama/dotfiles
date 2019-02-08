@@ -5,7 +5,8 @@ span_season='<span color="#b5bd68">'
 
 mon=`date +%m`
 temp=`sensors | grep 'Core 0' | awk '{ print substr($3, 2) }'`
-#batt=`upower -i $(upower -e | grep 'BAT') | grep -E "percentage" | awk '{print $2}'`
+# batt=`upower -i $(upower -e | grep 'BAT') | grep -E "percentage" | awk '{print $2}'`
+batt=`acpi | grep -o -P '\d+(?=%)'`
 case "$mon" in
 	"09"|"10"|"11") seas="秋"
 		;;
@@ -17,4 +18,4 @@ case "$mon" in
 		;;
 esac
 
-echo $span_date`LANG=ja_JP.UTF-8 date "+%Y年%b%d日(%a)"`' - </span>'$span_time`date +"%H:%M"`'</span>' $span_season$seas'</span>' $span_temp$temp'</span>'
+echo $span_date`LANG=ja_JP.UTF-8 date "+%Y年%b%d日(%a)"`' - </span>'$span_time`date +"%H:%M"`'</span>' $span_season$seas'</span>' $span_temp$temp'</span>'$span_time' | Batt: '$batt'%%</span>'

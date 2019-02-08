@@ -234,7 +234,7 @@ awful.screen.connect_for_each_screen(function(s)
             mykeyboardlayout,
             wibox.widget.systray(),
             statwidget,
-            mytextclock,
+            -- mytextclock,
             s.mylayoutbox,
         },
     }
@@ -260,29 +260,29 @@ globalkeys = gears.table.join(
     awful.key({ modkey,           }, "Escape", awful.tag.history.restore,
               {description = "go back", group = "tag"}),
 
-    awful.key({ }, "Print", function() awful.util.spawn("/home/xer0/.dotfiles/scrot", false) end,
+    awful.key({ }, "Print", function() awful.spawn("/home/xer0/.dotfiles/scrot", false) end,
               {description = "take screenshot", group = "extra"}),
-    awful.key({ }, "XF86AudioPlay", function() awful.util.spawn("mpc toggle", false) end,
+    awful.key({ }, "XF86AudioPlay", function() awful.spawn("mpc toggle", false) end,
               {description = "play or pause music", group = "mpc"}),
-    awful.key({ }, "#232", function() awful.util.spawn("xbacklight -dec 10", false) end,
+    awful.key({ }, "#232", function() awful.spawn("xbacklight -dec 10", false) end,
               {description = "decrease brightness", group = "extra"}),
-    awful.key({ }, "#233", function() awful.util.spawn("xbacklight -inc 10", false) end,
+    awful.key({ }, "#233", function() awful.spawn("xbacklight -inc 10", false) end,
               {description = "increase brightness", group = "extra"}),
-    awful.key({ }, "XF86AudioNext", function() awful.util.spawn("mpc next", false) end,
+    awful.key({ }, "XF86AudioNext", function() awful.spawn("mpc next", false) end,
               {description = "next music", group = "mpc"}),
-    awful.key({ }, "XF86AudioPrev", function() awful.util.spawn("mpc prev", false) end,
+    awful.key({ }, "XF86AudioPrev", function() awful.spawn("mpc prev", false) end,
               {description = "previous music", group = "mpc"}),
-    awful.key({ }, "XF86AudioStop", function() awful.util.spawn("mpc stop", false) end,
+    awful.key({ }, "XF86AudioStop", function() awful.spawn("mpc stop", false) end,
               {description = "stop music", group = "mpc"}),
-    awful.key({ }, "XF86AudioRaiseVolume", function() awful.util.spawn("amixer -D pulse sset Master 5%+", false) end,
+    awful.key({ }, "XF86AudioRaiseVolume", function() awful.spawn("amixer -D pulse sset Master 5%+", false) end,
               {description = "raise system volume", group = "alsa"}),
-    awful.key({ }, "XF86AudioLowerVolume", function() awful.util.spawn("amixer -D pulse sset Master 5%-", false) end,
+    awful.key({ }, "XF86AudioLowerVolume", function() awful.spawn("amixer -D pulse sset Master 5%-", false) end,
               {description = "lower system volume", group = "alsa"}),
-    awful.key({ "Control" }, "XF86AudioRaiseVolume", function() awful.util.spawn("mpc volume +5", false) end,
+    awful.key({ "Control" }, "XF86AudioRaiseVolume", function() awful.spawn("mpc volume +5", false) end,
               {description = "raise music volume", group = "ncmpcpp"}),
-    awful.key({ "Control" }, "XF86AudioLowerVolume", function() awful.util.spawn("mpc volume -5", false) end,
+    awful.key({ "Control" }, "XF86AudioLowerVolume", function() awful.spawn("mpc volume -5", false) end,
               {description = "lower music volume", group = "ncmpcpp"}),
-    awful.key({ }, "XF86AudioMute", function() awful.util.spawn("amixer -D pulse sset Master toggle", false) end,
+    awful.key({ }, "XF86AudioMute", function() awful.spawn("amixer -D pulse sset Master toggle", false) end,
               {description = "mute audio", group = "alsa"}),
 
     awful.key({ modkey,           }, "j",
@@ -482,6 +482,7 @@ root.keys(globalkeys)
 -- Rules to apply to new clients (through the "manage" signal).
 awful.rules.rules = {
     -- All clients will match this rule.
+    -- fill the screen with urxvt with size_hints_honor = false
     { rule = { },
       properties = { border_width = beautiful.border_width,
                      border_color = beautiful.border_normal,
@@ -490,7 +491,8 @@ awful.rules.rules = {
                      keys = clientkeys,
                      buttons = clientbuttons,
                      screen = awful.screen.preferred,
-                     placement = awful.placement.no_overlap+awful.placement.no_offscreen
+                     placement = awful.placement.no_overlap+awful.placement.no_offscreen,
+                     size_hints_honor = false
      }
     },
 
