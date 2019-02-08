@@ -46,7 +46,7 @@ end
 beautiful.init("~/.dotfiles/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
-terminal = "urxvt"
+terminal = "urxvtc"
 editor = os.getenv("EDITOR") or "vim"
 editor_cmd = terminal .. " -e " .. editor
 
@@ -197,6 +197,7 @@ awful.screen.connect_for_each_screen(function(s)
 
     -- Each screen has its own tag table.
     -- awful.tag({ "1", "2", "3", "4", "5", "6", "7", "8", "9" }, s, awful.layout.layouts[1])
+    layouts = awful.layout.layouts
     awful.tag({ "一", "二", "三", "四", "五", "六", "七", "八", "九" }, s, {layouts[2], layouts[2], layouts[2], layouts[2], layouts[10], layouts[2], layouts[2], layouts[2], layouts[2]} )
 
     -- Create a promptbox for each screen
@@ -223,7 +224,7 @@ awful.screen.connect_for_each_screen(function(s)
         layout = wibox.layout.align.horizontal,
         { -- Left widgets
             layout = wibox.layout.fixed.horizontal,
-            mylauncher,
+            -- mylauncher,
             s.mytaglist,
             s.mypromptbox,
         },
@@ -526,25 +527,23 @@ awful.rules.rules = {
       }, properties = { floating = true }},
 
     -- Add titlebars to normal clients and dialogs
-    { rule_any = {type = { "normal", "dialog" }
-      }, properties = { titlebars_enabled = true }
-    },
+    -- { rule_any = {type = { "normal", "dialog" }
+    --   }, properties = { titlebars_enabled = true }
+    -- },
 
     -- Set Firefox to always map on the tag named "2" on screen 1.
-    -- { rule = { class = "Firefox" },
-    --   properties = { screen = 1, tag = "九" } },
     { rule = { class = "Firefox" },
-      properties = { tag = tags[1][9] } },
+      properties = { screen = 1, tag = "九" } },
     { rule = { class = "Steam" },
-      properties = { tag = tags[1][2] } },
+      properties = { screen = 1, tag = "二" } },
     { rule = { class = "Nightly" },
-      properties = { tag = tags[1][9], floating = true } },
+      properties = { screen = 1, tag = "九" } },
     { rule = { class = "Anki" },
-      properties = { tag = tags[1][4] } },
+      properties = { screen = 1, tag = "四" } },
     { rule = { class = "Zathura" },
-      properties = { tag = tags[1][5] } },
+      properties = { screen = 1, tag = "五" } },
     { rule = { class = "Thunderbird" },
-      properties = { tag = tags[1][8] } },
+      properties = { screen = 1, tag = "八" } },
 }
 -- }}}
 
