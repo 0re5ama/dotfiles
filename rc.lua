@@ -78,6 +78,57 @@ awful.layout.layouts = {
 }
 -- }}}
 
+-- {{{ Notifications
+-- TODO: some options are not respected when the notification is created
+-- through lib-notify. Naughty works as expected.
+
+-- Icon size
+-- naughty.config.defaults['icon_size'] = beautiful.notification_icon_size
+
+-- Timeouts
+naughty.config.defaults.timeout = 5
+naughty.config.presets.low.timeout = 2
+naughty.config.presets.critical.timeout = 12
+
+-- Apply theme variables
+naughty.config.padding = beautiful.notification_padding
+naughty.config.spacing = beautiful.notification_spacing
+naughty.config.defaults.margin = beautiful.notification_margin
+naughty.config.defaults.border_width = beautiful.notification_border_width
+
+naughty.config.presets.normal = {
+  font         = beautiful.notification_font,
+  fg           = beautiful.notification_fg,
+  bg           = beautiful.notification_bg,
+  border_width = beautiful.notification_border_width,
+  margin       = beautiful.notification_margin,
+  position     = beautiful.notification_position
+}
+
+naughty.config.presets.low = {
+  font         = beautiful.notification_font,
+  fg           = beautiful.notification_crit_fg,
+  bg           = beautiful.notification_crit_bg,
+  border_width = beautiful.notification_border_width,
+  margin       = beautiful.notification_margin,
+  position     = beautiful.notification_position
+}
+
+naughty.config.presets.critical = {
+  font         = beautiful.notification_font,
+  fg           = beautiful.notification_crit_fg,
+  bg           = "#fff",
+  border_width = beautiful.notification_border_width,
+  margin       = beautiful.notification_margin,
+  position     = beautiful.notification_position
+}
+
+naughty.config.presets.ok = naughty.config.presets.low
+naughty.config.presets.info = naughty.config.presets.low
+naughty.config.presets.warn = naughty.config.presets.normal
+
+-- }}}
+
 -- {{{ Helper functions
 local function client_menu_toggle_fn()
     local instance = nil
@@ -91,6 +142,24 @@ local function client_menu_toggle_fn()
         end
     end
 end
+
+local rrect = function(radius)
+  return function(cr, width, height)
+    gears.shape.rounded_rect(cr, width, height, radius)
+    -- gears.shape.octogon(cr, width, height, radius)
+    -- gears.shape.rounded_bar(cr, width, height)
+  end
+end
+
+rect = function()
+  return function(cr, width, height)
+    gears.shape.rectangle(cr, width, height)
+  end
+end
+-- }}}
+
+-- {{{ Notification Shape
+beautiful.notification_shape = rrect(6)
 -- }}}
 
 -- {{{ Menu
@@ -198,7 +267,7 @@ awful.screen.connect_for_each_screen(function(s)
     -- Each screen has its own tag table.
     -- awful.tag({ "1", "2", "3", "4", "5", "6", "7", "8", "9" }, s, awful.layout.layouts[1])
     layouts = awful.layout.layouts
-    awful.tag({ "一", "二", "三", "四", "五", "六", "七", "八", "九" }, s, {layouts[2], layouts[2], layouts[2], layouts[2], layouts[10], layouts[2], layouts[2], layouts[2], layouts[2]} )
+    awful.tag({ "一", "二", "三", "四", "五", "六", "七", "八", "九" }, s, {layouts[2], layouts[2], layouts[2], layouts[2], layouts[10], layouts[2], layouts[2], layouts[2], layouts[5]} )
 
     -- Create a promptbox for each screen
     s.mypromptbox = awful.widget.prompt()
@@ -249,6 +318,13 @@ root.buttons(gears.table.join(
 ))
 -- }}}
 
+function getBrightness()
+    local filedescriptor = io.popen("xbacklight")
+    local value = filedescriptor:read()
+    filedescriptor:close()
+    return value
+end
+
 -- {{{ Key bindings
 globalkeys = gears.table.join(
     awful.key({ modkey,           }, "s",      hotkeys_popup.show_help,
@@ -262,11 +338,23 @@ globalkeys = gears.table.join(
 
     awful.key({ }, "Print", function() awful.spawn("/home/xer0/.dotfiles/scrot", false) end,
               {description = "take screenshot", group = "extra"}),
+    awful.key({ "Control" }, "Print", function() awful.spawn("/home/xer0/.dotfiles/scrot -s", false) end,
+              {description = "take screenshot", group = "extra"}),
     awful.key({ }, "XF86AudioPlay", function() awful.spawn("mpc toggle", false) end,
               {description = "play or pause music", group = "mpc"}),
-    awful.key({ }, "#232", function() awful.spawn("xbacklight -dec 10", false) end,
+    awful.key({ }, "#232", function()
+                awful.spawn("xbacklight -dec 10", false)
+                naughty.notify({ preset = naughty.config.presets.critical,
+                                 title = "Brightness",
+                                 text = tostring(getBrightness()) })
+              end,
               {description = "decrease brightness", group = "extra"}),
-    awful.key({ }, "#233", function() awful.spawn("xbacklight -inc 10", false) end,
+    awful.key({ }, "#233", function()
+                awful.spawn("xbacklight -inc 10", false)
+                naughty.notify({ preset = naughty.config.presets.critical,
+                                 title = "Brightness",
+                                 text = tostring(getBrightness()) })
+              end,
               {description = "increase brightness", group = "extra"}),
     awful.key({ }, "XF86AudioNext", function() awful.spawn("mpc next", false) end,
               {description = "next music", group = "mpc"}),
@@ -551,6 +639,24 @@ awful.rules.rules = {
 
 -- {{{ Signals
 -- Signal function to execute when a new client appears.
+
+if beautiful.border_radius ~= 0 then
+  client.connect_signal("manage", function (c)
+    if not c.fullscreen then
+      c.shape = rrect(beautiful.border_radius)
+    end
+  end)
+
+  -- Fullscreen clients should not have rounded corners
+  client.connect_signal("property::fullscreen", function (c)
+    if c.fullscreen then
+      c.shape = rect()
+    else
+      c.shape = rrect(beautiful.border_radius)
+    end
+  end)
+end
+
 client.connect_signal("manage", function (c)
     -- Set the windows at the slave,
     -- i.e. put it at the end of others instead of setting it master.

@@ -1,4 +1,5 @@
 "set foldmethod=syntax
+set nowrap
 set tabstop=2
 set shiftwidth=2
 "set noexpandtab
@@ -25,6 +26,8 @@ set t_Co=256
 "set statusline+=%l
 "set statusline+=/
 "set statusline+=%L
+
+"set statusline=%F%m%r%h%w[%L][%{&ff}]%y[%p%%][%04l,%04v]
 
 
 "let g:tex_flavor='latex'
@@ -101,6 +104,8 @@ Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'simnalamburt/vim-mundo'
 Plugin 'tpope/vim-speeddating'
 Plugin 'mxw/vim-jsx'
+Plugin 'suan/vim-instant-markdown', {'rtp': 'after'}
+"Plugin 'guns/vim-sexp'
 "Plugin 'digitaltoad/vim-pug'
 "Plugin 'leafgarland/typescript-vim'
 "Plugin 'burnettk/vim-angular'
@@ -117,9 +122,10 @@ au Filetype * set fo-=c fo-=r fo-=o
 
 let g:ctrlp_show_hidden = 1
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/](\.git$|\.hg$|\.svn$|target|node_modules)',
+  \ 'dir':  '\v[\/](\.git$|\.hg$|\.svn$|target|node_modules|bin|obj)',
   \ 'file': '\v\.(exe|so|dll)$',
   \ }
 
 set rtp+=$HOME/.local/lib/python3.5/site-packages/powerline/bindings/vim/
 
+autocmd BufNewFile,BufRead *.cshtml set syntax=html

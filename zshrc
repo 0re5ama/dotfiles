@@ -98,16 +98,22 @@ alias flood="/srv/torrent/flood/run.sh"
 alias browser-sync="node ~/.npm-global/lib/node_modules/browser-sync/bin/browser-sync.js"
 export WECHALLUSER="shahbibek10"
 export WECHALLTOKEN="41E22-01000-D10C1-7C1EC-20A26-6317E"
-export PATH=/home/xer0/.npm-global/:/home/xer0/.npm-global/bin:/usr/lib/node_modules:/usr/local/texlive/2016/bin/x86_64-linux:/home/xer0/Downloads/arduino/arduino-1.6.11:/home/xer0/Downloads/arduino/eagle/bin:/home/xer0/.gem/ruby/2.5.0/bin:/home/xer0/.config/composer/vendor/bin:$HOME/.cargo/bin:$PATH
+export PATH=/home/xer0/.npm-global/:/home/xer0/.npm-global/bin:/usr/lib/node_modules:/usr/local/texlive/2016/bin/x86_64-linux:/home/xer0/Downloads/arduino/arduino-1.6.11:/home/xer0/Downloads/arduino/eagle/bin:/home/xer0/.gem/ruby/2.5.0/bin:/home/xer0/.config/composer/vendor/bin:$HOME/.cargo/bin:/home/xer0/.dotnet/tools:$HOME/firefox:$PATH
 export PATH=/home/xer0/.local/bin/:$PATH
 export MANPATH=/usr/local/texlive/2016/texmf-dist/doc/man:$MANPATH
 export INFOPATH=/usr/local/texlive/2016/texmf-dist/doc/info:$INFOPATH
 export NODE_PATH=~/.npm-global/lib/node_modules
+
+export SYSTEMD_EDITOR=vim
+export DOTNET_CLI_TELEMETRY_OPTOUT=1
 alias stdn="shutdown -P now"
 alias ddlc="/media/xer0/sda4/DDLC-1.1.0-pc/DDLC.sh"
 alias mpvyt="mpv --ytdl-format=135+140"
 alias tm="cd ~/Documents/Programming/rust/codewars/hackerrank && tmux a"
 alias q="QHOME=~/q rlwrap -r ~/q/l64/q"
+alias l="exa -l"
+alias uu="sudo pacman -Syu --color always --noconfirm"
+alias ii="sudo pacman -S"
 # if [ -z "$DISPLAY" ] && [ -n "$XDG_VTNR" ] && [ "$XDG_VTNR" -eq 1 ]; then
   # exec startx
 # fi

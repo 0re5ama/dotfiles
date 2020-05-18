@@ -17,6 +17,7 @@ urxvtd &
 
 ## For openbox
 # nitrogen --restore &
+# For Notification
 # dunst &
 # exec openbox-session
 

@@ -6,7 +6,39 @@ theme = {}
 
 theme.font          = "Ubuntu 10"
 
-theme.useless_gap   = 0
+-- local dpi = xresources.apply_dpi
+-- local xrdb = xresources.get_current_theme()
+
+local xbackground = "#1D1F28"
+local xforeground = "#FDFDFD"
+local xcolor0 = "#282A36"
+local xcolor1 = "#F37F97"
+local xcolor2 = "#5ADECD"
+local xcolor3 = "#F2A272"
+local xcolor4 = "#8897F4"
+local xcolor5 = "#C574DD"
+local xcolor6 = "#79E6F3"
+local xcolor7 = "#FDFDFD"
+local xcolor8 = "#414458"
+local xcolor9 = "#FF4971"
+local xcolor10 =  "#18E3C8"
+local xcolor11 =  "#FF8037"
+local xcolor12 =  "#556FFF"
+local xcolor13 =  "#B043D1"
+local xcolor14 =  "#3FDCEE"
+local xcolor15 = "#BEBEC1"
+
+-- Set some colors that are used frequently as local variables
+local accent_color = xcolor14
+local focused_color = xcolor14
+local unfocused_color = xcolor7
+local urgent_color = xcolor9
+
+theme.useless_gap   = 5
+-- This could be used to manually determine how far away from the
+-- screen edge the bars / notifications should be.
+theme.screen_margin = 3
+
 theme.bg_normal     = "#1B1D1E"
 theme.bg_focus      = "#1B1D1E"
 theme.bg_urgent     = "#1B1D1E"
@@ -18,10 +50,36 @@ theme.fg_focus      = "#A6E22E"
 theme.fg_urgent     = "#F92672"
 theme.fg_minimize   = "#75715E"
 
-theme.border_width  = 1
+theme.border_width  = 0
 theme.border_normal = "#000000"
 theme.border_focus  = "#535d6c"
 theme.border_marked = "#91231c"
+theme.border_radius = 5
+
+-- Notifications
+-- Position: bottom_left, bottom_right, bottom_middle,
+--         top_left, top_right, top_middle
+
+theme.notification_position = "top_right" -- BUG: some notifications appear at top_right regardless
+theme.notification_border_width = 0
+theme.notification_border_radius = theme.border_radius
+-- theme.notification_border_color = xcolor10
+-- theme.notification_bg = xbackground
+-- theme.notification_fg = xcolor7
+-- theme.notification_crit_bg = urgent_color
+-- theme.notification_crit_fg = xcolor0
+theme.notification_bg = "#f5e7de"
+theme.notification_fg = "#34302d"
+theme.notification_crit_bg = "#b23636"
+theme.notification_crit_fg = "#992e2e"
+-- theme.notification_icon_size = dpi(60)
+-- theme.notification_height = dpi(80)
+-- theme.notification_width = dpi(300)
+theme.notification_margin = 15
+theme.notification_opacity = 1
+theme.notification_font = theme.font
+theme.notification_padding = theme.screen_margin * 2
+theme.notification_spacing = theme.screen_margin * 2
 
 -- There are other variable sets
 -- overriding the default one when
