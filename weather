@@ -1,0 +1,9 @@
+#!/usr/bin/sh
+
+LOCATION=$1
+
+if [ -z "${LOCATION}" ]; then
+    LOCATION="kathmandu"
+fi
+
+curl --silent "http://wttr.in/$LOCATION" | head -n 7
