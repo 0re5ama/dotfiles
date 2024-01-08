@@ -1,1 +1,0 @@
-scrot '%m-%d-%Y_%H-%M-%S.png' -e 'mv $f ~/Pictures/scrot/' $1
